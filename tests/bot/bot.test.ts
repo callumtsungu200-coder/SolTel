@@ -164,7 +164,7 @@ describe('Telegram command handling', () => {
   it('/start shows the dashboard with all eight sections, each wired to a route', async () => {
     await t.send('/start');
     const msg = t.calls.find((c) => c.method === 'sendMessage')!;
-    expect(String(msg.payload.text)).toContain('Solana Intelligence Dashboard');
+    expect(String(msg.payload.text)).toContain('SolTel Dashboard');
     expect(msg.payload.parse_mode).toBe('HTML');
     const data = allCallbackData([msg]);
     expect(data).toEqual(MAIN_MENU_ITEMS.map(([, d]) => d));

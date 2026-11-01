@@ -33,7 +33,7 @@ async function main(): Promise<void> {
   const cfg = parseEnv(process.env);
   registerSecrets(secretValues(cfg));
   setLogLevel(cfg.LOG_LEVEL);
-  logger.info('starting solana intelligence bot', { env: cfg.NODE_ENV, monitorMode: cfg.useWebhooks ? 'webhooks' : 'polling' });
+  logger.info('starting SolTel', { env: cfg.NODE_ENV, monitorMode: cfg.useWebhooks ? 'webhooks' : 'polling' });
 
   // ---- clients ----
   const rpc = new SolanaRpcClient(cfg.heliusRpcUrl, cfg.SOLANA_FALLBACK_RPC_URL, cfg.HTTP_TIMEOUT_MS);

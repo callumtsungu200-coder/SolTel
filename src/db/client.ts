@@ -9,7 +9,7 @@ export function createDb(url: string, serviceRoleKey: string, fetchImpl?: FetchL
   return createClient(url, serviceRoleKey, {
     auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
     global: {
-      headers: { 'x-application-name': 'solana-intel-bot' },
+      headers: { 'x-application-name': 'soltel' },
       ...(fetchImpl ? { fetch: fetchImpl as typeof fetch } : {}),
     },
   });

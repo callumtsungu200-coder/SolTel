@@ -1,5 +1,5 @@
 -- =====================================================================
--- Solana Intelligence Bot — initial schema
+-- SolTel — initial schema
 --
 -- Security model
 --   * The bot connects with the service-role key (server side only). The

@@ -6,7 +6,7 @@ import type { View } from '../render.js';
 export function mainMenuView(firstName?: string | null): View {
   return {
     text:
-      `🧠 <b>Solana Intelligence Dashboard</b>${firstName ? `\nWelcome, ${escapeHtml(firstName)}.` : ''}\n\n` +
+      `🧠 <b>SolTel Dashboard</b>${firstName ? `\nWelcome, ${escapeHtml(firstName)}.` : ''}\n\n` +
       'Research wallets and tokens with live on-chain and market data, track public wallets, and get alerts.\n\n' +
       '💡 Tip: paste any wallet address, token mint or transaction signature at any time.\n\n' +
       '<i>Read-only analytics. This bot never asks for private keys or seed phrases and never trades. Nothing here is financial advice.</i>',

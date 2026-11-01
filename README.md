@@ -1,4 +1,6 @@
-# Solana Wallet & Token Intelligence Bot
+# SolTel
+
+Solana wallet and token intelligence bot for Telegram.
 
 A Telegram bot for researching Solana wallets and tokens with live on-chain and
 market data. It tracks public wallets, monitors large transactions and sends
@@ -290,11 +292,11 @@ bot token, because Telegram allows only one long-polling consumer.
 ### Docker
 
 ```bash
-docker build -t solana-intel-bot .
+docker build -t soltel .
 ```
 
 ```bash
-docker run -d --name solana-intel-bot --restart unless-stopped --env-file .env -p 8080:8080 solana-intel-bot
+docker run -d --name soltel --restart unless-stopped --env-file .env -p 8080:8080 soltel
 ```
 
 The image runs as a non-root user and includes a `/health` healthcheck.
@@ -309,14 +311,14 @@ The image runs as a non-root user and includes a `/health` healthcheck.
 ### VPS (systemd)
 
 ```ini
-# /etc/systemd/system/solana-intel-bot.service
+# /etc/systemd/system/soltel.service
 [Unit]
-Description=Solana Intelligence Telegram Bot
+Description=SolTel Telegram Bot
 After=network-online.target
 
 [Service]
-WorkingDirectory=/opt/solana-intel-bot
-EnvironmentFile=/opt/solana-intel-bot/.env
+WorkingDirectory=/opt/soltel
+EnvironmentFile=/opt/soltel/.env
 ExecStart=/usr/bin/node dist/index.js
 Restart=always
 User=bot
@@ -328,7 +330,7 @@ WantedBy=multi-user.target
 ```
 
 ```bash
-sudo systemctl enable --now solana-intel-bot
+sudo systemctl enable --now soltel
 ```
 
 ---

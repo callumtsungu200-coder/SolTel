@@ -1,5 +1,5 @@
 {
-  "name": "solana-intel-bot",
+  "name": "soltel",
   "version": "1.0.0",
   "description": "Solana wallet & token intelligence Telegram bot (grammY + Helius + DexScreener + Supabase)",
   "type": "module",
