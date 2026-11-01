@@ -1,0 +1,35 @@
+{
+  "name": "solana-intel-bot",
+  "version": "1.0.0",
+  "description": "Solana wallet & token intelligence Telegram bot (grammY + Helius + DexScreener + Supabase)",
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "smoke": "tsx scripts/smoke.ts"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@grammyjs/auto-retry": "^2.0.2",
+    "@grammyjs/runner": "^2.0.3",
+    "@supabase/supabase-js": "^2.118.0",
+    "dotenv": "^18.0.9",
+    "grammy": "^1.46.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.14",
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
